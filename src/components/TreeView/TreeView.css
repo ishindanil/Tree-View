@@ -1,0 +1,10 @@
+.TreeView {
+    margin: 0;
+    padding: 0;
+
+    outline: none;
+    list-style-type: none;
+    user-select: none;
+
+    color: #1a201d;
+}

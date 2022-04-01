@@ -1,0 +1,36 @@
+.TreeLabel {
+    display: flex;
+    align-items: center;
+
+    padding-left: 4px;
+
+    font: normal 16px/24px 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+    cursor: pointer;
+}
+
+.TreeLabel:hover,
+.TreeLabel_focused {
+    background-color: #e0e0e0;
+}
+
+.TreeLabel_selected {
+    background-color: #edf4fb;
+}
+
+.TreeLabel_selected:hover,
+.TreeLabel_selected.TreeLabel_focused {
+    background-color: #d1e4f6;
+}
+
+.TreeLabel__IconContainer {
+    display: flex;
+    align-items: center;
+
+    width: 18px;
+    margin-right: 4px;
+}
+
+.TreeLabel__IconContainer svg {
+    width: 100%;
+}
