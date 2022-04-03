@@ -113,8 +113,8 @@ export function generateLargeDataset(count = 1000) {
                 { id: `Nested item ${i}1`, label: `Nested item ${i}1` },
                 { id: `Nested item ${i}2`, label: `Nested item ${i}2` },
                 { id: `Nested item ${i}3`, label: `Nested item ${i}3` },
-            ]
-        })
+            ],
+        });
     }
 
     return nodes;

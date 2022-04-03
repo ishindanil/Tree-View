@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-
 import { TreeView } from '../.';
 import { CollapseIcon, ExpandIcon } from '../../Icons';
 
@@ -22,8 +21,8 @@ export default {
         },
         expanded: {
             disable: true,
-        }
-    }
+        },
+    },
 } as ComponentMeta<typeof TreeView>;
 
 const Template: ComponentStory<typeof TreeView> = ({ multiSelect, nodes }) => {
@@ -41,20 +40,20 @@ const Template: ComponentStory<typeof TreeView> = ({ multiSelect, nodes }) => {
             nodes={nodes}
             multiSelect={multiSelect}
         />
-    )
-}
+    );
+};
 
 export const Playground = Template.bind({});
 Playground.args = {
     multiSelect: false,
     nodes: NODES_MOCK,
-}
+};
 
 export const LargeDataset = Template.bind({});
 LargeDataset.args = {
     multiSelect: false,
     nodes: generateLargeDataset(),
-}
+};
 LargeDataset.parameters = {
-    controls: { disabled: true }
-}
+    controls: { disabled: true },
+};

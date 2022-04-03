@@ -5,7 +5,8 @@ import {
     FocusEventHandler,
     KeyboardEventHandler,
     ReactNode,
-    ComponentType, MouseEventHandler,
+    ComponentType,
+    MouseEventHandler,
 } from 'react';
 import { block } from 'bem-cn';
 
@@ -87,7 +88,7 @@ export const TreeView = (props: TreeViewProps) => {
             const performSelect = (newValue: string | string[]) => {
                 onSelect(newValue);
                 setFocusedNodeId(nodeId);
-            }
+            };
 
             if (multiSelect) {
                 if (!Array.isArray(selected)) {
@@ -135,21 +136,24 @@ export const TreeView = (props: TreeViewProps) => {
         [expanded, onToggle, isExpanded],
     );
 
-    const handleNodeMouseDown: MouseEventHandler<HTMLLIElement> = useCallback((event) => {
-        let element = event.target as HTMLElement | null;
+    const handleNodeMouseDown: MouseEventHandler<HTMLLIElement> = useCallback(
+        (event) => {
+            let element = event.target as HTMLElement | null;
 
-        while (element && !isLiElement(element)) {
-            element = element.parentElement;
-        }
+            while (element && !isLiElement(element)) {
+                element = element.parentElement;
+            }
 
-        if (isLiElement(element)) {
-            selectNode(element.id);
-            toggleNode(element.id);
-        }
+            if (isLiElement(element)) {
+                selectNode(element.id);
+                toggleNode(element.id);
+            }
 
-        event.preventDefault();
-        event.stopPropagation();
-    }, [selectNode, toggleNode]);
+            event.preventDefault();
+            event.stopPropagation();
+        },
+        [selectNode, toggleNode],
+    );
 
     const handleTreeFocus: FocusEventHandler<HTMLUListElement> = useCallback(() => {
         const firstSelected = Array.isArray(selected) ? selected[0] : selected;
@@ -321,7 +325,7 @@ export const TreeView = (props: TreeViewProps) => {
                     break;
             }
 
-            event.preventDefault()
+            event.preventDefault();
         },
         [handleArrowDown, handleArrowUp, handleArrowRight, handleArrowLeft, handleEnter, handleSpace],
     );

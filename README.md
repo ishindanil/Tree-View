@@ -5,9 +5,11 @@
 ## Тут будет ссылка на демо
 
 ## Соблюдены рекомендации WAI для Tree View
+
 https://www.w3.org/TR/wai-aria-practices-1.1/#TreeView
 
 ## Как запустить у себя
-- Клонируем репозиторий
-- `npm install`
-- `npm run storybook`
+
+-   Клонируем репозиторий
+-   `npm install`
+-   `npm run storybook`
