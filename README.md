@@ -2,7 +2,8 @@
 
 Использовал Create React App + Storybook, чтобы не возиться со сборкой
 
-## Тут будет ссылка на демо
+## [Тут можно посмотреть демо](https://6249d6fec2e1d3003a844c5a-lcasfnkhyc.chromatic.com/?path=/story/treeview--playground)
+
 
 ## Соблюдены рекомендации WAI для Tree View
 
