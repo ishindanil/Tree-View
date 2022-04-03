@@ -8,7 +8,5 @@ export const TREE_VIEW_CONTEXT_DEFAULT_VALUE: TreeViewContextValue = {
     isSelected: () => false,
     isFocused: () => false,
     isExpanded: () => false,
-    onFocus: () => {},
-    onSelect: () => {},
-    onToggle: () => {},
+    onMouseDown: () => {},
 };

@@ -13,8 +13,6 @@ export type TreeViewContextValue = {
     isFocused: (nodeId: string) => boolean;
     isExpanded: (nodeId: string) => boolean;
     onMouseDown: MouseEventHandler<HTMLLIElement>;
-    onSelect: (nodeId: string) => void;
-    onToggle: (nodeId: string) => void;
 };
 
 export const TreeViewContext = createContext<TreeViewContextValue>(TREE_VIEW_CONTEXT_DEFAULT_VALUE);

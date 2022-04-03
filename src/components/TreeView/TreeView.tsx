@@ -342,8 +342,6 @@ export const TreeView = (props: TreeViewProps) => {
                 isFocused,
                 LabelComponent,
                 onMouseDown: handleNodeMouseDown,
-                onSelect: selectNode,
-                onToggle: toggleNode,
             }}
         >
             <ul
