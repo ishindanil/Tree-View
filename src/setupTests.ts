@@ -4,13 +4,12 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-const originalError = console.error.bind(console.warn)
+const originalError = console.error.bind(console.warn);
 
 beforeAll(() => {
-    console.error = (msg) =>
-        !msg.toString().startsWith('Warning:') && originalError(msg)
-})
+    console.error = (msg) => !msg.toString().startsWith('Warning:') && originalError(msg);
+});
 
 afterAll(() => {
-    console.error = originalError
-})
+    console.error = originalError;
+});
