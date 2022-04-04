@@ -2,7 +2,6 @@ import { useContext, useRef } from 'react';
 import { block } from 'bem-cn';
 
 import { TreeViewContext } from '../TreeView/TreeView.context';
-import { mergeRefs } from '../../utils/merge-refs';
 import { TreeLabel } from '../TreeLabel';
 
 import { getAriaSelectedProp } from './TreeNode.helpers';
@@ -21,7 +20,6 @@ const b = block('TreeNode');
 export const TreeNode = (props: TreeNodeProps) => {
     const { id, label, disabled = false, children } = props;
 
-    const ref = useRef<HTMLLIElement>(null);
     const {
         multiSelect,
         expandIcon,
@@ -34,8 +32,6 @@ export const TreeNode = (props: TreeNodeProps) => {
         LabelComponent = TreeLabel,
     } = useContext(TreeViewContext);
 
-    const refs = mergeRefs(isFocused(id) ? [ref, focusedElementRef] : [ref]);
-
     const expandable = Array.isArray(children) && children.length > 0;
     const expanded = isExpanded(id);
     const focused = isFocused(id);
@@ -45,7 +41,7 @@ export const TreeNode = (props: TreeNodeProps) => {
 
     return (
         <li
-            ref={refs}
+            ref={focused ? focusedElementRef : undefined}
             id={id}
             className={b()}
             role="treeitem"
