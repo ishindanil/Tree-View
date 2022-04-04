@@ -49,11 +49,20 @@ Playground.args = {
     nodes: NODES_MOCK,
 };
 
-export const LargeDataset = Template.bind({});
-LargeDataset.args = {
+export const TreeWith1kNodes = Template.bind({});
+TreeWith1kNodes.args = {
     multiSelect: false,
-    nodes: generateLargeDataset(),
+    nodes: generateLargeDataset(1000),
 };
-LargeDataset.parameters = {
+TreeWith1kNodes.parameters = {
+    controls: { disabled: true },
+};
+
+export const TreeWith10kNodes = Template.bind({});
+TreeWith10kNodes.args = {
+    multiSelect: false,
+    nodes: generateLargeDataset(10000),
+};
+TreeWith10kNodes.parameters = {
     controls: { disabled: true },
 };
