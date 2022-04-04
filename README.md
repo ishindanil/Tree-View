@@ -4,7 +4,7 @@
     <img src="./docs/demo.gif" width="400" />
 </p>
 
--   [Storybook](https://6249d6fec2e1d3003a844c5a-lcasfnkhyc.chromatic.com/?path=/story/treeview--playground)
+-   [Storybook](https://master--6249d6fec2e1d3003a844c5a.chromatic.com/?path=/story/treeview--playground)
 -   Соблюдены [рекомендации WAI](https://www.w3.org/TR/wai-aria-practices-1.1/#TreeView) для Tree View
 
 ## Props
