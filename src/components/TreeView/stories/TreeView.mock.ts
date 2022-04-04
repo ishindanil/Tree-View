@@ -103,7 +103,7 @@ export const NODES_MOCK: TreeNodeProps[] = [
     },
 ];
 
-export function generateLargeDataset(count = 1000) {
+export function generateLargeDataset(count = 10000) {
     const nodes = [];
 
     for (let i = 0; i < count; i++) {
