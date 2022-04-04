@@ -156,7 +156,7 @@ export const TreeView = (props: TreeViewProps) => {
     );
 
     const handleTreeFocus: FocusEventHandler<HTMLUListElement> = useCallback(() => {
-        const firstSelected = Array.isArray(selected) ? selected[0] : selected;
+        const firstSelected = Array.isArray(selected) ? selected[selected.length - 1] : selected;
 
         setFocusedNodeId(firstSelected ?? nodes[0]?.id);
     }, [selected, nodes]);

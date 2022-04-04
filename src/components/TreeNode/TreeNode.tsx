@@ -53,6 +53,7 @@ export const TreeNode = (props: TreeNodeProps) => {
             aria-selected={getAriaSelectedProp(multiSelect, disabled, selected)}
             aria-expanded={expandable ? expanded : undefined}
             data-expandable={expandable}
+            data-testid={id}
             onMouseDown={onMouseDown}
         >
             <LabelComponent

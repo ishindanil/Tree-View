@@ -23,7 +23,8 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +68,7 @@
     "@storybook/testing-library": "^0.0.9",
     "chromatic": "^6.5.3",
     "eslint-config-prettier": "^8.5.0",
+    "jest-watch-typeahead": "^0.6.5",
     "prettier": "2.6.2",
     "webpack": "^5.70.0"
   }
