@@ -133,7 +133,7 @@ describe('TreeView component tests', () => {
         expect(tree).toHaveAttribute('aria-activedescendant', 'reports');
     });
 
-    it('should have aria-selected attribute on selected node', () => {
+    it('should have aria-selected attribute set to true on selected node', () => {
         makeTree({ selected: ['reports'] });
 
         const selectedNode = screen.getByTestId('reports');
@@ -194,7 +194,6 @@ describe('TreeView component tests', () => {
         const disabledNode = screen.getByTestId('letters');
 
         expect(disabledNode).toHaveAttribute('aria-disabled', 'true');
-        expect(disabledNode.getAttribute('aria-selected')).toBeNull();
     });
 
     it('should not have aria-selected attribute on disabled nodes', () => {
