@@ -1,12 +1,13 @@
 # 🌳 Компонент Tree View
+
 ![workflow status](https://github.com/ishindanil/Tree-View/actions/workflows/node.js.yml/badge.svg?branch=master)
 
 <p align="center">
     <img src="./docs/demo.gif" width="400" />
 </p>
 
-- [Storybook](https://master--6249d6fec2e1d3003a844c5a.chromatic.com/?path=/story/treeview--playground)
-- Соблюдены [рекомендации WAI](https://www.w3.org/TR/wai-aria-practices-1.1/#TreeView) для Tree View
+-   [Storybook](https://master--6249d6fec2e1d3003a844c5a.chromatic.com/?path=/story/treeview--playground)
+-   Соблюдены [рекомендации WAI](https://www.w3.org/TR/wai-aria-practices-1.1/#TreeView) для Tree View
 
 ## Props
 
