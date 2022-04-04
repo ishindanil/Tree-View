@@ -149,7 +149,6 @@ export const TreeView = (props: TreeViewProps) => {
                 toggleNode(element.id);
             }
 
-            event.preventDefault();
             event.stopPropagation();
         },
         [selectNode, toggleNode],
