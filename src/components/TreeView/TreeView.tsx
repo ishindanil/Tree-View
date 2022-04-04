@@ -28,6 +28,9 @@ export type LabelComponentProps = Omit<TreeNodeProps, 'children'> & {
 };
 
 export type TreeViewProps = {
+    /** Дополнительный класс */
+    className?: string;
+
     /** Структура дерева */
     nodes: TreeNodeProps[];
 
@@ -58,6 +61,7 @@ export type TreeViewProps = {
 
 export const TreeView = (props: TreeViewProps) => {
     const {
+        className,
         expanded,
         selected,
         multiSelect = false,
@@ -344,7 +348,7 @@ export const TreeView = (props: TreeViewProps) => {
             }}
         >
             <ul
-                className={b()}
+                className={b.mix(className)}
                 role="tree"
                 tabIndex={0}
                 aria-multiselectable={multiSelect}

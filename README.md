@@ -22,6 +22,7 @@
 | **LabelComponent** | Компонент для переопределения рендера лейбла<br>[Пример](https://github.com/ishindanil/Tree-View/blob/master/src/components/TreeLabel/TreeLabel.tsx) | `ComponentType<LabelComponentProps>`       |             |
 | **onToggle**       | Обработчик открытия/закрытия parent-узла дерева                                                                                                      | `((expanded: string[]) => void)`           | `undefined` |
 | **onSelect**       | Обработчик выбора узла дерева                                                                                                                        | `((selected: string \| string[]) => void)` | `undefined` |
+| **className**      | Дополнительный класс                                                                                                                                 | `string`                                   | `undefined` |
 
 ## Как запустить у себя
 

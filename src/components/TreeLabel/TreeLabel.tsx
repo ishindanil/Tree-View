@@ -11,7 +11,7 @@ export const TreeLabel = memo(({ disabled, focused, selected, expandable, icon, 
     return (
         <div className={b({ disabled, focused, selected })}>
             <span className={b('IconContainer')}>{expandable && icon}</span>
-            {label}
+            <span className={b('Text')}>{label}</span>
         </div>
     );
 });

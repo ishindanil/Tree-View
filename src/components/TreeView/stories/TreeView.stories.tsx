@@ -30,16 +30,18 @@ const Template: ComponentStory<typeof TreeView> = ({ multiSelect, nodes }) => {
     const [expanded, setExpanded] = useState<string[]>([]);
 
     return (
-        <TreeView
-            collapseIcon={<CollapseIcon />}
-            expandIcon={<ExpandIcon />}
-            selected={selected}
-            expanded={expanded}
-            onSelect={setSelected}
-            onToggle={setExpanded}
-            nodes={nodes}
-            multiSelect={multiSelect}
-        />
+        <div style={{ maxWidth: 250 }}>
+            <TreeView
+                collapseIcon={<CollapseIcon />}
+                expandIcon={<ExpandIcon />}
+                selected={selected}
+                expanded={expanded}
+                onSelect={setSelected}
+                onToggle={setExpanded}
+                nodes={nodes}
+                multiSelect={multiSelect}
+            />
+        </div>
     );
 };
 

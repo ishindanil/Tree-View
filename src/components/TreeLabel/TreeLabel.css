@@ -30,6 +30,7 @@
 .TreeLabel__IconContainer {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 
     width: 18px;
     margin-right: 4px;
@@ -37,4 +38,10 @@
 
 .TreeLabel__IconContainer svg {
     width: 100%;
+}
+
+.TreeLabel__Text {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
 }
