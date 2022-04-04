@@ -23,6 +23,10 @@
     background-color: #d1e4f6;
 }
 
+.TreeLabel_disabled {
+    opacity: 0.38;
+}
+
 .TreeLabel__IconContainer {
     display: flex;
     align-items: center;

@@ -6,7 +6,7 @@ export const NODES_MOCK: TreeNodeProps[] = [
         label: 'Projects',
         children: [
             { id: 'project-1.docx', label: 'project-1.docx' },
-            { id: 'project-2.docx', label: 'project-2.docx' },
+            { id: 'project-2.docx', label: 'project-2.docx', disabled: true },
             {
                 id: 'project-3',
                 label: 'project-3',
@@ -47,6 +47,7 @@ export const NODES_MOCK: TreeNodeProps[] = [
             {
                 id: 'report-2',
                 label: 'report-2',
+                disabled: true,
                 children: [
                     { id: 'report-2A.docx', label: 'report-2A.docx' },
                     { id: 'report-2B.docx', label: 'report-2B.docx' },

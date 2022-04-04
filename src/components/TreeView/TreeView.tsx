@@ -144,7 +144,7 @@ export const TreeView = (props: TreeViewProps) => {
                 element = element.parentElement;
             }
 
-            if (isLiElement(element)) {
+            if (isLiElement(element) && element.getAttribute('aria-disabled') !== 'true') {
                 selectNode(element.id);
                 toggleNode(element.id);
             }
@@ -230,7 +230,7 @@ export const TreeView = (props: TreeViewProps) => {
     const handleArrowRight = useCallback(() => {
         const element = focusedElementRef.current;
 
-        if (!element || element.dataset.expandable === 'false') {
+        if (!element || element.dataset.expandable === 'false' || element.getAttribute('aria-disabled') === 'true') {
             return;
         }
 
@@ -270,7 +270,7 @@ export const TreeView = (props: TreeViewProps) => {
     const handleEnter = useCallback(() => {
         const element = focusedElementRef.current;
 
-        if (!element) {
+        if (!element || element.getAttribute('aria-disabled') === 'true') {
             return;
         }
 
@@ -286,7 +286,7 @@ export const TreeView = (props: TreeViewProps) => {
     const handleSpace = useCallback(() => {
         const element = focusedElementRef.current;
 
-        if (!element) {
+        if (!element || element.getAttribute('aria-disabled') === 'true') {
             return;
         }
 
